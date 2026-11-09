@@ -157,8 +157,7 @@
 
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
-    tl.from(".hero__bg", { scale: 1.35, duration: 2.4, ease: "power2.out" }, 0)
-      .from(".header", { yPercent: -100, opacity: 0, duration: 1 }, .2)
+    tl.from(".header", { yPercent: -100, opacity: 0, duration: 1 }, .2)
       .from(".hero__eyebrow", { x: -30, opacity: 0, duration: .8 }, .4)
       .from(".hero__title .w", { yPercent: 110, rotate: 4, duration: 1.1, stagger: .08 }, .45)
       .from(".hero__bar", { scaleX: 0, duration: .9 }, .95)
@@ -174,7 +173,6 @@
     gsap.to(".hero__shield", { yPercent: -70, rotate: 6, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
 
     // hero parallax
-    gsap.to(".hero__bg", { yPercent: 18, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     gsap.to(".hero__content", { yPercent: 25, opacity: .1, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
 
     // generic reveals (batched)
@@ -190,25 +188,8 @@
     // service cards
     gsap.from(".card", { y: 80, opacity: 0, rotateX: -12, duration: 1.1, ease: "power3.out", stagger: .12, scrollTrigger: { trigger: ".cards", start: "top 82%" } });
 
-    // marquee speed + skew on scroll velocity
-    var track = $(".marquee__track");
-    ScrollTrigger.create({
-      trigger: ".marquee", start: "top bottom", end: "bottom top",
-      onUpdate: function (s) { var v = gsap.utils.clamp(-14, 14, s.getVelocity() / 140); gsap.to(track, { skewX: -v, duration: .4, overwrite: true }); }
-    });
-    gsap.fromTo(".marquee", { xPercent: 4 }, { xPercent: -4, ease: "none", scrollTrigger: { trigger: ".marquee", start: "top bottom", end: "bottom top", scrub: true } });
-
-    // about: mask reveal + image parallax
-    gsap.fromTo(".about__img", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 1.5, ease: "power4.inOut", scrollTrigger: { trigger: ".about__img", start: "top 80%" } });
-    gsap.to(".about__img img", { yPercent: -12, ease: "none", scrollTrigger: { trigger: ".about", start: "top bottom", end: "bottom top", scrub: true } });
-    gsap.from(".about__badge", { scale: 0, rotate: -12, duration: 1, ease: "back.out(1.7)", scrollTrigger: { trigger: ".about__img", start: "top 60%" } });
-
     // lion watermark
     gsap.fromTo(".diffs__lion", { y: 120, rotate: -6 }, { y: -120, rotate: 4, ease: "none", scrollTrigger: { trigger: ".diffs", start: "top bottom", end: "bottom top", scrub: true } });
-
-    // process line
-    gsap.to(".process__line i", { scaleX: 1, ease: "none", scrollTrigger: { trigger: ".process__track", start: "top 75%", end: "bottom 55%", scrub: .6 } });
-    gsap.from(".step__dot", { scale: 0, duration: .7, ease: "back.out(2)", stagger: .2, scrollTrigger: { trigger: ".process__track", start: "top 78%" } });
 
     // segments wave
     gsap.from(".seg .ico", { y: 20, opacity: 0, duration: .8, stagger: .08, ease: "power3.out", scrollTrigger: { trigger: ".segments__grid", start: "top 85%" } });
