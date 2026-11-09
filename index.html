@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proserv Serviços | Terceirização de serviços com confiança</title>
+  <meta name="description" content="Proserv Serviços: há mais de 20 anos oferecendo terceirização de limpeza e conservação, portaria e controle de acesso, serviços terceirizados e especializados com qualidade, eficiência e compromisso.">
+  <meta name="theme-color" content="#0B1622">
+  <meta property="og:title" content="Proserv Serviços — Soluções que geram confiança">
+  <meta property="og:description" content="Terceirização de serviços com qualidade, eficiência e compromisso em cada detalhe.">
+  <meta property="og:image" content="assets/img/app-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/img/icone.svg">
+  <link rel="apple-touch-icon" href="assets/img/app-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Saira:wdth,wght@100..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <img src="assets/img/icone.svg" alt="" class="loader__icon">
+    <span class="loader__bar"><i></i></span>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo" aria-label="Proserv Serviços — início">
+        <img src="assets/img/logo.svg" alt="Proserv Serviços" width="190" height="47">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#inicio" class="nav__link is-active">Início</a>
+        <a href="#sobre" class="nav__link">Sobre nós</a>
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#diferenciais" class="nav__link">Diferenciais</a>
+        <a href="#segmentos" class="nav__link">Clientes</a>
+        <a href="#contato" class="nav__link">Contato</a>
+      </nav>
+      <a href="#contato" class="btn btn--primary header__cta">Solicitar orçamento</a>
+      <button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" style="background-image:url('assets/img/fachada.webp')"></div>
+      <div class="hero__shade"></div>
+      <canvas class="hero__particles" aria-hidden="true"></canvas>
+      <svg class="hero__shield" viewBox="0 0 400 480" aria-hidden="true">
+        <path d="M40 300 L36 110 L200 40 L364 110 L344 330" />
+        <path d="M48 330 C52 400 140 450 202 466 L246 440" />
+      </svg>
+      <div class="container hero__content">
+        <p class="eyebrow hero__eyebrow">Terceirização de serviços</p>
+        <h1 class="hero__title" data-split>
+          <span class="line">Soluções que</span>
+          <span class="line">geram <em>confiança.</em></span>
+        </h1>
+        <span class="bar hero__bar"></span>
+        <p class="hero__lead">Há mais de 20 anos oferecendo terceirização de serviços com qualidade, eficiência e compromisso em cada detalhe.</p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--primary btn--lg magnetic">Solicitar orçamento</a>
+          <a href="#sobre" class="btn btn--ghost">Saiba mais <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <a href="#numeros" class="hero__scroll" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" id="numeros">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <svg class="ico" viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31" rx="4"/><path d="M7 19h34M16 6v8M32 6v8"/><path class="dot" d="M15 27h2M23 27h2M31 27h2M15 34h2M23 34h2"/></svg>
+          <div><strong><span data-count="20">0</span>+</strong><small>Anos de mercado</small></div>
+        </div>
+        <div class="stat reveal">
+          <svg class="ico" viewBox="0 0 48 48"><circle cx="18" cy="16" r="7"/><path d="M5 41c0-8 6-13 13-13s13 5 13 13"/><circle cx="34" cy="14" r="5.5"/><path d="M33 25c6 0 11 4 11 11"/></svg>
+          <div><strong><span data-count="150">0</span>+</strong><small>Clientes atendidos</small></div>
+        </div>
+        <div class="stat reveal">
+          <svg class="ico" viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg>
+          <div><strong><span data-count="100">0</span>%</strong><small>Compromisso</small></div>
+        </div>
+        <div class="stat reveal">
+          <svg class="ico" viewBox="0 0 48 48"><circle cx="24" cy="18" r="12"/><path d="M24 11l2.2 4.6 5 .6-3.7 3.4 1 5-4.5-2.5-4.5 2.5 1-5-3.7-3.4 5-.6z"/><path d="M16 27l-4 15 7-3 4 6 1-11M32 27l4 15-7-3-4 6"/></svg>
+          <div><strong class="word">Qualidade</strong><small>Em cada detalhe</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Limpeza e conservação</span><i></i><span>Portaria</span><i></i><span>Controle de acesso</span><i></i><span>Recepção</span><i></i><span>Serviços terceirizados</span><i></i><span>Manutenção</span><i></i><span>Atendimento sob medida</span><i></i>
+        <span>Limpeza e conservação</span><i></i><span>Portaria</span><i></i><span>Controle de acesso</span><i></i><span>Recepção</span><i></i><span>Serviços terceirizados</span><i></i><span>Manutenção</span><i></i><span>Atendimento sob medida</span><i></i>
+      </div>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <section class="section services" id="servicos">
+      <div class="container services__grid">
+        <div class="services__intro reveal">
+          <p class="eyebrow">Nossos serviços</p>
+          <h2 class="h2">Soluções completas para o seu negócio.</h2>
+          <span class="bar"></span>
+          <p class="muted">Oferecemos serviços personalizados e eficientes, garantindo mais segurança, limpeza e organização para a sua empresa — com equipe própria, treinada e supervisionada.</p>
+          <a href="#contato" class="link-arrow">Fale com um especialista <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="cards">
+          <article class="card tilt">
+            <span class="card__num">01</span>
+            <svg class="ico" viewBox="0 0 48 48"><path d="M36 4L22 24"/><path d="M14 22l12 8-4 6c-2 3-9 7-16 8 2-6 3-12 4-16z"/><path d="M12 37l5-6M17 41l4-5"/><path d="M34 40h8M38 36v8"/></svg>
+            <h3>Limpeza e Conservação</h3>
+            <p>Ambientes limpos e organizados para o bem-estar de todos, com rotinas e produtos adequados a cada espaço.</p>
+            <a href="#contato" class="card__more">Saiba mais <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card tilt">
+            <span class="card__num">02</span>
+            <svg class="ico" viewBox="0 0 48 48"><path d="M12 14c0-4 5-8 12-8s12 4 12 8z"/><path d="M12 14h24"/><circle cx="24" cy="21" r="6"/><path d="M8 44c0-8 7-13 16-13s16 5 16 13"/><path d="M24 31v6"/></svg>
+            <h3>Portaria e Controle de Acesso</h3>
+            <p>Profissionais treinados para garantir a segurança e o controle do seu espaço, 24 horas por dia.</p>
+            <a href="#contato" class="card__more">Saiba mais <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card tilt">
+            <span class="card__num">03</span>
+            <svg class="ico" viewBox="0 0 48 48"><rect x="10" y="7" width="28" height="37" rx="3"/><path d="M18 4h12v6H18z"/><circle cx="17" cy="20" r="1.5"/><circle cx="17" cy="28" r="1.5"/><circle cx="17" cy="36" r="1.5"/><path d="M22 20h10M22 28h10M22 36h10"/></svg>
+            <h3>Serviços Terceirizados</h3>
+            <p>Soluções inteligentes para otimizar processos, reduzir custos e liberar sua equipe para o que é estratégico.</p>
+            <a href="#contato" class="card__more">Saiba mais <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card tilt">
+            <span class="card__num">04</span>
+            <svg class="ico spin-slow" viewBox="0 0 48 48"><circle cx="24" cy="24" r="7"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/><circle cx="24" cy="24" r="14"/></svg>
+            <h3>Serviços Especializados</h3>
+            <p>Atendimentos sob medida para necessidades específicas do seu negócio, com planejamento e acompanhamento.</p>
+            <a href="#contato" class="card__more">Saiba mais <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section about" id="sobre">
+      <div class="container about__grid">
+        <div class="about__media">
+          <div class="about__img reveal-mask"><img src="assets/img/fachada.webp" alt="Fachada com o logotipo da Proserv Serviços" loading="lazy"></div>
+          <div class="about__badge">
+            <strong><span data-count="20">0</span>+</strong>
+            <span>anos de<br>experiência</span>
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="eyebrow reveal">Sobre nós</p>
+          <h2 class="h2 reveal">Excelência que se constrói com experiência.</h2>
+          <span class="bar reveal"></span>
+          <p class="reveal">A Proserv Serviços atua há mais de duas décadas no mercado, oferecendo soluções em terceirização com foco em qualidade, ética e responsabilidade. Contamos com uma equipe capacitada e preparada para atender as necessidades do seu negócio.</p>
+          <ul class="pillars">
+            <li class="reveal"><b>Confiança</b><span>Relações sólidas, transparência e palavra cumprida.</span></li>
+            <li class="reveal"><b>Força</b><span>Liderança, presença e proteção — como o leão da nossa marca.</span></li>
+            <li class="reveal"><b>Qualidade</b><span>Excelência em cada detalhe da operação.</span></li>
+            <li class="reveal"><b>Compromisso</b><span>Pessoas treinadas, processos claros, resultado entregue.</span></li>
+          </ul>
+          <a href="#processo" class="btn btn--outline reveal">Conheça nossa forma de trabalhar <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section diffs" id="diferenciais">
+      <img src="assets/img/leao.svg" alt="" class="diffs__lion" aria-hidden="true">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Diferenciais</p>
+          <h2 class="h2">Por que escolher a Proserv.</h2>
+          <span class="bar"></span>
+        </div>
+        <div class="diffs__grid">
+          <div class="diff reveal"><span class="diff__i">01</span><h3>Equipe treinada</h3><p>Seleção criteriosa, capacitação contínua e uniformização completa dos colaboradores.</p></div>
+          <div class="diff reveal"><span class="diff__i">02</span><h3>Supervisão constante</h3><p>Acompanhamento em campo e gestor dedicado para garantir o padrão combinado.</p></div>
+          <div class="diff reveal"><span class="diff__i">03</span><h3>Reposição ágil</h3><p>Cobertura de faltas e férias para que a sua operação nunca pare.</p></div>
+          <div class="diff reveal"><span class="diff__i">04</span><h3>Segurança jurídica</h3><p>Gestão trabalhista e documentação em dia, reduzindo riscos para o contratante.</p></div>
+          <div class="diff reveal"><span class="diff__i">05</span><h3>Contratos sob medida</h3><p>Escopo, escala e orçamento desenhados de acordo com a realidade do seu negócio.</p></div>
+          <div class="diff reveal"><span class="diff__i">06</span><h3>Atendimento próximo</h3><p>Canal direto e respostas rápidas — você sempre sabe com quem falar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section process" id="processo">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Como trabalhamos</p>
+          <h2 class="h2">Do diagnóstico ao resultado.</h2>
+          <span class="bar"></span>
+        </div>
+        <div class="process__track">
+          <div class="process__line"><i></i></div>
+          <div class="step reveal"><span class="step__dot">1</span><h3>Diagnóstico</h3><p>Visitamos o local e entendemos as necessidades, horários e riscos da operação.</p></div>
+          <div class="step reveal"><span class="step__dot">2</span><h3>Proposta</h3><p>Apresentamos um plano personalizado, com equipe dimensionada e custos claros.</p></div>
+          <div class="step reveal"><span class="step__dot">3</span><h3>Implantação</h3><p>Seleção, treinamento e início dos serviços com acompanhamento de perto.</p></div>
+          <div class="step reveal"><span class="step__dot">4</span><h3>Acompanhamento</h3><p>Supervisão contínua, indicadores e melhorias ao longo de todo o contrato.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGMENTOS -->
+    <section class="section segments" id="segmentos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Clientes</p>
+          <h2 class="h2">Atendemos diversos segmentos.</h2>
+          <span class="bar"></span>
+          <p class="muted">Mais de 150 clientes atendidos com soluções adaptadas a cada tipo de ambiente.</p>
+        </div>
+        <div class="segments__grid">
+          <div class="seg reveal"><svg class="ico" viewBox="0 0 48 48"><path d="M6 42V18l18-12 18 12v24"/><path d="M18 42V28h12v14M2 42h44"/></svg><span>Condomínios</span></div>
+          <div class="seg reveal"><svg class="ico" viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="36" rx="2"/><path d="M17 14h4M27 14h4M17 22h4M27 22h4M17 30h4M27 30h4M21 42v-6h6v6M4 42h40"/></svg><span>Empresas e escritórios</span></div>
+          <div class="seg reveal"><svg class="ico" viewBox="0 0 48 48"><path d="M4 42V22l12 8v-8l12 8V10h10v32z"/><path d="M2 42h44M32 18h6"/></svg><span>Indústrias</span></div>
+          <div class="seg reveal"><svg class="ico" viewBox="0 0 48 48"><path d="M6 18l4-10h28l4 10"/><path d="M6 18c0 3 2 5 5 5s5-2 5-5c0 3 2 5 5 5s5-2 5-5c0 3 2 5 5 5s5-2 5-5c0 3 2 5 5 5"/><path d="M9 23v19h30V23M19 42V32h10v10"/></svg><span>Comércio e varejo</span></div>
+          <div class="seg reveal"><svg class="ico" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="34" rx="3"/><path d="M24 16v14M17 23h14M4 42h40"/></svg><span>Saúde</span></div>
+          <div class="seg reveal"><svg class="ico" viewBox="0 0 48 48"><path d="M24 8L2 18l22 10 22-10z"/><path d="M10 22v10c0 4 6 8 14 8s14-4 14-8V22M44 19v12"/></svg><span>Instituições de ensino</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <img src="assets/img/icone.svg" alt="" class="cta__icon" aria-hidden="true">
+        <div>
+          <h2 class="h2">Pronto para ter mais tranquilidade na sua operação?</h2>
+          <p>Receba uma proposta personalizada sem compromisso.</p>
+        </div>
+        <a href="#contato" class="btn btn--light btn--lg magnetic">Solicitar orçamento</a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <p class="eyebrow">Contato</p>
+          <h2 class="h2">Vamos conversar sobre o seu negócio.</h2>
+          <span class="bar"></span>
+          <p class="muted">Preencha o formulário e nossa equipe retorna o mais rápido possível com uma proposta sob medida.</p>
+          <ul class="contact__list">
+            <li><svg class="ico" viewBox="0 0 48 48"><path d="M10 6h8l4 10-5 3c2 5 6 9 11 11l3-5 10 4v8c0 2-2 4-4 4C19 41 7 29 6 10c0-2 2-4 4-4z"/></svg><span><small>Telefone / WhatsApp</small><a data-config="phoneDisplay" data-href="phoneHref" href="#">(00) 00000-0000</a></span></li>
+            <li><svg class="ico" viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="3"/><path d="M4 13l20 14 20-14"/></svg><span><small>E-mail</small><a data-config="email" data-href="emailHref" href="#">contato@seudominio.com.br</a></span></li>
+            <li><svg class="ico" viewBox="0 0 48 48"><path d="M24 44s14-13 14-25a14 14 0 10-28 0c0 12 14 25 14 25z"/><circle cx="24" cy="19" r="5"/></svg><span><small>Endereço</small><b data-config="address">Criciúma – SC</b></span></li>
+          </ul>
+        </div>
+        <form class="form reveal" id="form-orcamento" novalidate>
+          <div class="form__row">
+            <label class="field"><input type="text" name="nome" required placeholder=" "><span>Nome *</span></label>
+            <label class="field"><input type="text" name="empresa" placeholder=" "><span>Empresa</span></label>
+          </div>
+          <div class="form__row">
+            <label class="field"><input type="tel" name="telefone" required placeholder=" "><span>Telefone *</span></label>
+            <label class="field"><input type="email" name="email" placeholder=" "><span>E-mail</span></label>
+          </div>
+          <label class="field field--select">
+            <select name="servico" required>
+              <option value="" selected disabled hidden></option>
+              <option>Limpeza e Conservação</option>
+              <option>Portaria e Controle de Acesso</option>
+              <option>Serviços Terceirizados</option>
+              <option>Serviços Especializados</option>
+              <option>Mais de um serviço</option>
+            </select>
+            <span>Serviço de interesse *</span>
+          </label>
+          <label class="field"><textarea name="mensagem" rows="4" placeholder=" "></textarea><span>Conte um pouco sobre a sua necessidade</span></label>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Enviar pelo WhatsApp <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <p class="form__note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <img src="assets/img/logo.svg" alt="Proserv Serviços" class="footer__logo" width="200" height="49">
+        <p class="muted">Terceirização de serviços com qualidade, eficiência e compromisso em cada detalhe.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <a href="#servicos">Limpeza e Conservação</a><a href="#servicos">Portaria e Controle de Acesso</a><a href="#servicos">Serviços Terceirizados</a><a href="#servicos">Serviços Especializados</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="ano">2026</span> Proserv Serviços LTDA<span data-config="cnpjLine"></span> · Criciúma – SC. Todos os direitos reservados.</span>
+      <a href="#inicio" class="to-top" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></a>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-href="whatsHref" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1116 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 01-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4 3.7 3.7 0 00-1.1 2.7 6.4 6.4 0 001.3 3.4 14.6 14.6 0 005.6 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 002.2-1.6 2.8 2.8 0 00.2-1.6c-.1-.1-.3-.2-.6-.4z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
