@@ -4,7 +4,7 @@
   var doc = document.documentElement;
   doc.classList.add("js");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var hasGsap = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+  var hasGsap = typeof window.gsap !== "undefined";
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
@@ -123,13 +123,23 @@
   });
   $$(".field input, .field select", form).forEach(function (f) { f.addEventListener("input", function () { f.closest(".field").classList.remove("is-invalid"); }); });
 
-  /* ---------- animacoes (suaves) ---------- */
-  var started = false;
-  function intro() {
-    if (started) return; started = true;
-    if (!hasGsap || reduce) { $$(".reveal").forEach(function (el) { el.style.opacity = 1; el.style.transform = "none"; }); return; }
+  /* ---------- revelacoes ao rolar (IntersectionObserver: nao depende do
+     carregamento de imagens/fontes, entao funciona ja no primeiro acesso) ---------- */
+  var reveals = $$(".reveal, .card");
+  function show(el) { el.classList.add("is-in"); }
+  if (reduce || !("IntersectionObserver" in window)) {
+    reveals.forEach(show);
+  } else {
+    var rio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { show(e.target); rio.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach(function (el) { rio.observe(el); });
+    // garantia: nada fica escondido se algo falhar
+    setTimeout(function () { reveals.forEach(function (el) { if (el.getBoundingClientRect().top < window.innerHeight) show(el); }); }, 1200);
+  }
 
-    gsap.registerPlugin(ScrollTrigger);
+  /* ---------- entrada do topo (GSAP, opcional) ---------- */
+  if (hasGsap && !reduce) {
     var tl = gsap.timeline({ defaults: { ease: "power2.out", duration: .7 } });
     tl.from(".hero__eyebrow", { y: 12, opacity: 0 }, 0)
       .from(".hero__title .w", { y: 20, opacity: 0, stagger: .05 }, .1)
@@ -137,22 +147,9 @@
       .from(".hero__lead", { y: 12, opacity: 0 }, .4)
       .from(".hero__actions > *", { y: 12, opacity: 0, stagger: .08 }, .5)
       .from(".hero__scroll", { opacity: 0 }, .7);
-
-    // escudo desenhado uma vez, sem movimento na rolagem
     $$(".hero__shield path").forEach(function (p, i) {
       var len = p.getTotalLength();
       gsap.fromTo(p, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: 1.8, delay: .2 + i * .3, ease: "power1.inOut" });
     });
-
-    // revelacoes ao rolar
-    ScrollTrigger.batch(".reveal", {
-      start: "top 92%", once: true,
-      onEnter: function (els) { gsap.to(els, { opacity: 1, y: 0, duration: .6, ease: "power2.out", stagger: .06, overwrite: true }); }
-    });
-    gsap.from(".card", { y: 24, opacity: 0, duration: .6, ease: "power2.out", stagger: .08, scrollTrigger: { trigger: ".cards", start: "top 90%", once: true } });
   }
-
-  if (document.readyState !== "loading") intro();
-  else document.addEventListener("DOMContentLoaded", intro);
-  setTimeout(intro, 1500);
 })();
